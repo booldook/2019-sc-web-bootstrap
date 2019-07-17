@@ -30,6 +30,7 @@ img {
 
 /* 공통클래스 */
 .img {width: 100%;}
+.img2 {max-width: 100%;}
 
 .tc {text-align: center;}
 .tl {text-align: left;}

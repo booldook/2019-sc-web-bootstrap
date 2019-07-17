@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Bootstrap</title>
+	<link rel="stylesheet" href="../css/fa.min.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="../css/base-bootstrap.css">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/wow.min.js"></script>
+	<style>
+		.d-flex {justify-content: space-between;}
+		.d-flex > div {flex: 32% 0 1;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h2>Image <small>부트스트랩 이미지 처리</small></h2>
+		</div>
+		<div class="d-flex">
+			<div><img src="../img/sanfran.jpg" class="mx-2 img-fluid rounded"></div>
+			<div><img src="../img/paris.jpg" class="mx-2 img-fluid rounded-circle"></div>
+			<div><img src="../img/newyork.jpg" class="mx-2 img-fluid img-thumbnail"></div>
+		</div>
+		<div class="my-5 text-center">
+			<img src="../img/paris.jpg">
+		</div>
+		<div class="my-5">
+			<img src="../img/paris.jpg" class="d-block mx-auto">
+		</div>
+		<div class="border border-dark">
+			<img src="../img/paris.jpg" class="w-100">
+		</div>
+	</div>
+</body>
+</html>
