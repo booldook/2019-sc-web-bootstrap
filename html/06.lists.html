@@ -127,7 +127,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="card-deck my-3 p-3 border">
+		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#employees">구성원 현황</button>
+		<div class="card-deck my-3 p-3 border" id="employees">
 			<div class="card">
 				<img class="card-img-top" src="../img/team1.jpg" alt="Card image">
 				<div class="card-body">
@@ -176,6 +177,58 @@
 		</div>
 		<div class="border my-3 p-3">
 			<a href="https://www.w3schools.com/bootstrap4/bootstrap_dropdowns.asp" target="_blank">자세한 Dropdown 설명</a>
+		</div>
+		<div class="jumbotron">
+			<h2>Collapse</h2>
+		</div>
+		<div class="border p-3 my-3">
+			<button data-toggle="collapse" data-target="#demo" class="btn btn-primary">Collapsible</button>
+			<div id="demo" class="collapse">
+				Lorem ipsum dolor text....
+			</div>
+		</div>
+		<div class="jumbotron">
+			<h2>Accordion</h2>
+		</div>
+		<div class="border my-3 p-3">
+			<div id="accordion">
+				<div class="card my-1">
+					<div class="card-header">
+						<a class="card-link" data-toggle="collapse" href="#collapseOne">
+							Collapsible Group Item #1
+						</a>
+					</div>
+					<div id="collapseOne" class="collapse" data-parent="#accordion">
+						<div class="card-body">
+							Lorem ipsum..
+						</div>
+					</div>
+				</div>
+				<div class="card my-1">
+					<div class="card-header">
+						<a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+							Collapsible Group Item #2
+						</a>
+					</div>
+					<div id="collapseTwo" class="collapse" data-parent="#accordion">
+						<div class="card-body">
+							Lorem ipsum..
+						</div>
+					</div>
+				</div>
+				<div class="card my-1">
+					<div class="card-header">
+						<a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+							Collapsible Group Item #3
+						</a>
+					</div>
+					<div id="collapseThree" class="collapse" data-parent="#accordion">
+						<div class="card-body">
+							Lorem ipsum..
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div> <!-- .container -->
 </body>
