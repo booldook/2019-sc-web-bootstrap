@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,28 +13,47 @@
 	<script src="../js/popper.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 </head>
+
 <body>
 	<div class="container">
 		<div class="border p-3 my-3">
-			<div class="alert alert-primary">
-				Form
+			<div class="alert alert-dark">
+				<h4>
+					<i class="fas fa-edit"></i> 회원가입 
+					<small>소중한 회원으로 모십니다.</small>
+				</h4>
 			</div>
 			<form action="#">
 				<ul class="list-group">
 					<li class="list-group-item">
-						<div class="col"></div>
+						<div class="row align-items-center">
+							<div class="col-12 col-md-2">아이디 : </div>
+							<div class="col-12 col-md-10">
+								<input type="text" class="form-control" name="userid" id="userid" placeholder="아이디를 입력하세요.">
+							</div>
+						</div>
 					</li>
 					<li class="list-group-item">
-
+						<div class="row align-items-center">
+							<div class="col-12 col-md-2">이름 : </div>
+							<div class="col-12 col-md-10">
+								<input type="text" class="form-control" name="username" id="username" placeholder="이름을 입력하세요.">
+							</div>
+						</div>
 					</li>
 				</ul>
+				<div class="p-3 text-center">
+					<button type="submit" class="btn btn-primary">회원가입</button>
+					<button type="reset" class="btn btn-danger">다시작성</button>
+				</div>
 			</form>
 		</div>
 	</div>
-	<div class="row">
+	<!-- <div class="row">
 		<div class="border border-dark p-3 col-12 col-md-4 col-lg-2"></div>
 		<div class="border border-dark p-3 col-12 col-md-4 col-lg-2"></div>
 		<div class="border border-dark p-3 col-12 col-md-4 col-lg-8"></div>
-	</div>
+	</div> -->
 </body>
+
 </html>
