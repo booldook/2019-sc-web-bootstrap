@@ -19,32 +19,59 @@
 		<div class="border p-3 my-3">
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> Open modal</button>
 		</div>
+		<div class="border p-3 my-3">
+			<a href="#" data-toggle="tooltip" title="Hooray!" data-placement="bottom">Hover over me</a>
+		</div>
+		<div class="border p-3 my-3 shadow-sm">
+			<a href="#" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Popover Header"
+				data-content="Some content inside the popover">Toggle
+				popover</a>
+		</div>
+		<div class="border p-3 my-3">
+			<div class="toast" data-autohide="false">
+				<div class="toast-header d-flex justify-content-between">
+					Toast Header
+					<button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+				</div>
+				<div class="toast-body">
+					Some text inside the toast body
+				</div>
+			</div>
+		</div>
 	</div> <!-- .container -->
 
-	<!-- The Modal -->
-	<div class="modal" id="myModal">
-		<div class="modal-dialog">
-			<div class="modal-content">
 
+
+
+
+	<!-- The Modal -->
+	<div class="modal fade" id="myModal">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
+			<div class="modal-content">
 				<!-- Modal Header -->
 				<div class="modal-header">
-					<h4 class="modal-title">Modal Heading</h4>
+					<h4 class="modal-title">제목입니다.</h4>
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
-
 				<!-- Modal body -->
 				<div class="modal-body">
-					Modal body..
+					내용입니다.
 				</div>
-
 				<!-- Modal footer -->
 				<div class="modal-footer">
-					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">닫기</button>
 				</div>
-
 			</div>
 		</div>
 	</div>
+
+	<script>
+		$(document).ready(function () {
+			$('[data-toggle="tooltip"]').tooltip();
+			$('[data-toggle="popover"]').popover();
+			$('.toast').toast('show');
+		});
+	</script>
 </body>
 
 </html>
