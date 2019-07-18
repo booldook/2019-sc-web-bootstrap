@@ -74,7 +74,7 @@
 									<option value="017">017</option>
 									<option value="018">018</option>
 									<option value="019">019</option>
-								</select> - 
+								</select> -
 								<input type="text" name="tel2" id="tel2" class="form-control" style="width: 80px;"> -
 								<input type="text" name="tel3" id="tel3" class="form-control" style="width: 80px;">
 							</div>
@@ -108,7 +108,8 @@
 						<div class="form-group row align-items-center">
 							<label for="cmt" class="col-12 col-md-2">남기실 말:</label>
 							<div class="col-12 col-md-10">
-								<textarea class="form-control" name="cmt" id="cmt" rows="10" placeholder="남기실 말을 작성해 주세요." required></textarea>
+								<textarea class="form-control" name="cmt" id="cmt" rows="10" placeholder="남기실 말을 작성해 주세요."
+									required></textarea>
 								<div class="valid-feedback">사용가능합니다.</div>
 								<div class="invalid-feedback">입력해 주세요.</div>
 							</div>
@@ -145,6 +146,72 @@
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
 		</div>
+		<div class="border p-3 my-3">
+			<form>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" style="width: 150px;">아이디</span>
+					</div>
+					<input type="text" class="form-control" placeholder="Username">
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" style="width: 150px;">패스워드</span>
+					</div>
+					<input type="text" class="form-control" placeholder="Username">
+				</div>
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" placeholder="Your Email">
+					<div class="input-group-append">
+						<span class="input-group-text">@example.com</span>
+					</div>
+				</div>
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" placeholder="Search">
+					<div class="input-group-append">
+						<button class="btn btn-success" type="submit">Search</button>
+					</div>
+				</div>
+
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" placeholder="Something clever..">
+					<div class="input-group-append">
+						<button class="btn btn-primary" type="button">OK</button>
+						<button class="btn btn-danger" type="button">Cancel</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="border p-3 my-3">
+			<form>
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+					<label class="custom-control-label" for="customCheck">Check this custom checkbox</label>
+				</div>
+				<div class="custom-control custom-switch">
+					<input type="checkbox" class="custom-control-input" id="switch1">
+					<label class="custom-control-label" for="switch1">Toggle me</label>
+				</div>
+				<div class="form-inline">
+					<div class="custom-control custom-radio mr-3">
+						<input type="radio" class="custom-control-input" id="gender-m" name="gender2" value="M">
+						<label class="custom-control-label" for="gender-m">남자</label>
+					</div>
+					<div class="custom-control custom-radio">
+						<input type="radio" class="custom-control-input" id="gender-f" name="gender2" value="F">
+						<label class="custom-control-label" for="gender-f">여자</label>
+					</div>
+					<div>
+						<label for="customRange">Custom range</label>
+						<input type="range" class="custom-range" id="customRange" name="points1">
+					</div>
+					<div class="custom-file">
+						<input type="file" class="custom-file-input" id="customFile">
+						<label class="custom-file-label" for="customFile">Choose file</label>
+					</div>
+				</div>
+			</form>
+		</div>
 	</div> <!-- .container -->
 
 
@@ -153,7 +220,13 @@
 		<div class="border border-dark p-3 col-12 col-md-4 col-lg-2"></div>
 		<div class="border border-dark p-3 col-12 col-md-4 col-lg-8"></div>
 	</div> -->
-	
+	<script>
+		// Add the following code if you want the name of the file appear on select
+		$(".custom-file-input").on("change", function() {
+			var fileName = $(this).val().split("\\").pop();
+			$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+		});
+		</script>
 </body>
 
 </html>
