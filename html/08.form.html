@@ -13,7 +13,11 @@
 	<script src="../js/popper.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 </head>
-
+<!-- 
+.form-group => label 과 form-element(input 등)를 감싸는 element
+.form-control => form element(input 등)가 원래 가지고 있는 속성인 display: inline-block 속성을 block으로 바꿔주고, 이쁘게 만들어주고, width: 100%를 적용한다.
+.form-inline => 보통 form태그에 적용하며, form-control이 적용되어 display: block인 요소들을 display: inline-block으로 바꿔준다.
+ -->
 <body>
 	<div class="container">
 		<div class="border p-3 my-3">
@@ -23,9 +27,6 @@
 					<small>소중한 회원으로 모십니다.</small>
 				</h4>
 			</div>
-			<input type="text" class="form-control">
-			<input type="text" class="form-control">
-			<input type="text" class="form-control">
 			<form action="#" class="was-validated">
 				<ul class="list-group">
 					<li class="list-group-item">
@@ -41,7 +42,21 @@
 					<li class="list-group-item">
 						<div class="form-group row align-items-center">
 							<label for="username" class="col-12 col-md-2">이름 : </label>
-							<input type="text" class="form-control col-12 col-md-10" name="username" id="username" placeholder="이름을 입력하세요.">
+							<div class="col-12 col-md-10">
+								<input type="text" class="form-control" name="username" id="username" placeholder="이름을 입력하세요." required>
+								<div class="valid-feedback">사용가능합니다.</div>
+								<div class="invalid-feedback">이름을 입력하세요.</div>
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="form-group row align-items-center">
+							<label for="cmt" class="col-12 col-md-2">남기실 말:</label>
+							<div class="col-12 col-md-10">
+								<textarea class="form-control" name="cmt" id="cmt" rows="10" placeholder="남기실 말을 작성해 주세요." required></textarea>
+								<div class="valid-feedback">사용가능합니다.</div>
+								<div class="invalid-feedback">입력해 주세요.</div>
+							</div>
 						</div>
 					</li>
 				</ul>
