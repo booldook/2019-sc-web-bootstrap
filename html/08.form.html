@@ -18,6 +18,7 @@
 .form-control => form element(input 등)가 원래 가지고 있는 속성인 display: inline-block 속성을 block으로 바꿔주고, 이쁘게 만들어주고, width: 100%를 적용한다.
 .form-inline => 보통 form태그에 적용하며, form-control이 적용되어 display: block인 요소들을 display: inline-block으로 바꿔준다.
  -->
+
 <body>
 	<div class="container">
 		<div class="border p-3 my-3">
@@ -27,7 +28,7 @@
 					<small>소중한 회원으로 모십니다.</small>
 				</h4>
 			</div>
-			<form action="#" class="was-validated">
+			<form action="#">
 				<ul class="list-group">
 					<li class="list-group-item">
 						<div class="form-group row align-items-center">
@@ -46,6 +47,60 @@
 								<input type="text" class="form-control" name="username" id="username" placeholder="이름을 입력하세요." required>
 								<div class="valid-feedback">사용가능합니다.</div>
 								<div class="invalid-feedback">이름을 입력하세요.</div>
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="row align-items-center">
+							<div class="col-12 col-md-2">성별</div>
+							<div class="col-12 col-md-10">
+								<label>
+									<input type="radio" name="gender" value="M"> 남자
+								</label>
+								<label>
+									<input type="radio" name="gender" value="F"> 여자
+								</label>
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="row align-items-center form-group">
+							<div class="col-12 col-md-2">전화번호</div>
+							<div class="col-12 col-md-10 form-inline">
+								<select name="tel1" id="tel1" class="form-control">
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+								</select> - 
+								<input type="text" name="tel2" id="tel2" class="form-control" style="width: 80px;"> -
+								<input type="text" name="tel3" id="tel3" class="form-control" style="width: 80px;">
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="row align-items-center">
+							<div class="col-12 col-md-2">관심분야</div>
+							<div class="col-12 col-md-10">
+								<label>
+									<input type="checkbox" name="favorite"> 음악감상
+								</label>
+								<label>
+									<input type="checkbox" name="favorite"> 영화감상
+								</label>
+								<label>
+									<input type="checkbox" name="favorite"> 등산
+								</label>
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="row align-items-center form-group">
+							<div class="col-12 col-md-2">사진등록</div>
+							<div class="col-12 col-md-10">
+								<input type="file" name="photo" id="photo" class="form-control-file">
 							</div>
 						</div>
 					</li>
@@ -98,6 +153,7 @@
 		<div class="border border-dark p-3 col-12 col-md-4 col-lg-2"></div>
 		<div class="border border-dark p-3 col-12 col-md-4 col-lg-8"></div>
 	</div> -->
+	
 </body>
 
 </html>
